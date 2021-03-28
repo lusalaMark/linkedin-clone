@@ -12,7 +12,7 @@ function Header() {
   return (
     <div className="header">
       <div className="header__left">
-        {/*<img src="inkedin/src/assets/logo.png" alt="LINKEDIN" />*/}
+       {/**  <img src="assets/logo1.png" alt=""/>*/}
         <div className="header__search">
           <SearchIcon />
           <input type="text" />
@@ -25,7 +25,7 @@ function Header() {
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption avatar = "" title='Me' />
+        <HeaderOption avatar="" title="Me" />
       </div>
     </div>
   );
