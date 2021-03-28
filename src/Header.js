@@ -12,10 +12,10 @@ function Header() {
   return (
     <div className="header">
       <div className="header__left">
-       {/**  <img src="assets/logo1.png" alt=""/>*/}
+        {/**  <img src="assets/logo1.png" alt=""/>*/}
         <div className="header__search">
           <SearchIcon />
-          <input type="text" />
+          <input placeholder="Search" type="text" />
         </div>
       </div>
 
