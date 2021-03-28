@@ -12,7 +12,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        {/*<img src="" alt="" />*/}
+        <img src="./assets/fit.jpg" alt="" />
         <Avatar className="sidebar__avatar" />
         <h2>Mark Lusala</h2>
         <h4>lusalamark17@gmail.com</h4>
@@ -27,6 +27,7 @@ function Sidebar() {
           <p className="sidebar__statNumber">577680</p>
         </div>
       </div>
+
       <div className="sidebar__bottom">
         <p>Recent</p>
         {recentItem("reactjs")}
