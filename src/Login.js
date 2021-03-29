@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "./features/userSlice";
 import { auth } from "./firebase";
 import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useStateate("");
+  const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
@@ -41,7 +43,6 @@ function Login() {
 
   return (
     <div className="login">
-      <h1>You are not logged in</h1>
       <img src="" alt="" />
       <form>
         <input
@@ -52,7 +53,7 @@ function Login() {
         />
         <input
           value={profilePic}
-          onChange={(e) => setProfilepic(e.target.value)}
+          onChange={(e) => setProfilePic(e.target.value)}
           placeholder="Profile pic URL (optional)"
           type="text"
         />
@@ -68,13 +69,13 @@ function Login() {
           placeholder="Password"
           type="password"
         />
-        <button type="submit" onclick={loginToApp}>
+        <button type="submit" onClick={loginToApp}>
           Sign In
         </button>
       </form>
       <p>
         Not a member?{" "}
-        <span className="login__register" onclick={register}>
+        <span className="login__register" onClick={register}>
           Register Now
         </span>
       </p>

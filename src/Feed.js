@@ -14,7 +14,7 @@ function Feed() {
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
-  useEffectct(() => {
+  useEffect(() => {
     db.collection("posts")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) =>

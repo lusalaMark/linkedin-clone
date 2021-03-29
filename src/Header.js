@@ -9,6 +9,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import { useDispatch } from "react-redux";
 import { auth } from "./firebase";
+import { logout } from "./features/userSlice";
 
 function Header() {
   const dispatch = useDispatch();
