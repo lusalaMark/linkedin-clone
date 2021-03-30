@@ -11,6 +11,7 @@
   object-fit: contain;
   height: 70px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .login > form {
@@ -27,7 +28,7 @@
   border-radius: 5px;
 }
 
-.login > form > button > {
+.login > form > button {
   width: 365px;
   height: 50px;
   font-size: large;
@@ -37,5 +38,9 @@
 }
 
 .login__register {
+  cursor: pointer;
+  color: #0074b1;
+}
+.login > p {
   margin-top: 20px;
 }

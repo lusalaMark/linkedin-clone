@@ -10,8 +10,23 @@ function Login() {
   const [name, setName] = useState("");
   const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
+
   const loginToApp = (e) => {
     e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        dispatch(
+          login({
+            email: userAuth.user.email,
+            uid: userAuth.user.uid,
+            displayName: userAuth.user.displayName,
+            profileUrl: userAuth.user.photoURL,
+          })
+        );
+      })
+      .catch((error) => alert(error));
   };
 
   const register = () => {
@@ -48,7 +63,7 @@ function Login() {
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Full Namerequired if registering()"
+          placeholder="Full Name (required if registering)"
           type="text"
         />
         <input
