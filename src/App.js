@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
-import { login, logout, selectUser } from "./features/userSlice";
+import { login, selectUser } from "./features/userSlice";
 import Feed from "./Feed";
+import Widgets from "./Widgets";
 import { auth } from "./firebase";
 import Header from "./Header";
 import Login from "./Login";
@@ -37,7 +38,7 @@ function App() {
         <div className="app__body">
           <Sidebar />
           <Feed />
-          {/*Widgets */}
+          <Widgets />
         </div>
       )}
     </div>
